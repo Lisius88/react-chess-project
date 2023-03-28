@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(222, 230, 225);
+}
+
+.app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    width: calc(32px * 8);
+    height: calc(32px * 8);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 24px;
+    background-color: rgb(77, 37, 29);
+    box-shadow: 4px 4px 69px 7px rgba(34, 60, 80, 0.2);
+    border-radius: 30px;
+     
+
+}
+
+@media screen and (min-width: 1200px) {
+  .board {
+    width: calc(64px * 8);
+    height: calc(64px * 8);
+    padding: 48px;
+}
+}
+
+.cell {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .cell {
+    width: 64px;
+    height: 64px;
+}
+}
+
+.cell img {
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+  .cell img {
+    width: 48px;
+    height: 48px;
+}
+}
+
+.black {
+    background-color: rgb(97, 52, 22);
+}
+
+.white {
+    background-color: rgb(214, 205, 152);
+}
+
+.selected {
+    background-color: rgb(236, 196, 14);
+}
+
+.available {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: rgb(57, 131, 73);
+}
+
+.lost {
+    display: none;
+}
+
+@media screen and (min-width: 540px) {
+  .lost {
+    display: block;
+    height: calc(50vh  - 60px);
+    padding: 30px;
+    margin-left: 50px;
+    background-color: rgb(197, 202, 202);
+}
+}
+
+@media screen and (min-width: 1200px) {
+  .lost {
+    height: calc(50vh  - 60px);
+    padding: 30px;
+    margin-left: 50px;
+    background-color: rgb(197, 202, 202);
+}
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  width: 400px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 300px;
+}
+}
+
+.title {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.timer {
+    width: 304px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 1200px) {
+  .timer {
+    width: 608px;
+}
+}
+
+button {
+  display: block;
+  background-color:rgb(197, 202, 202);
+  border-radius: 16px;
+  font-weight: 400;
+  font-size: 10px;
+  font-family: 'Gilroy';
+  font-style: normal;
+  line-height: 20px;
+  text-align: center;
+  border: none;
+width: 100px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  text-transform: uppercase;
+  border: 3px solid #00a7a7;
+}
+
+@media screen and (min-width: 1200px) {
+  button {
+  font-weight: 700;
+  font-size: 16px;
+
+    width: 120px;
+  height: 48px;
+}
+}
+
+button:active {
+    background-color: #00a7a7;
+    border: 3px solid lightgray;
+}
+
+.descr {
+text-align: center;
+margin-bottom: 10px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.timer-title {
+    font-size: 14px;
+}
+
+@media screen and (min-width: 1200px) {
+  .timer-title {
+  font-size: 26px;
+}
+}
