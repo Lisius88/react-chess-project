@@ -11,5 +11,5 @@
             "dest": "/index.html"
         }
     ],
-    "build": "next build"
+    "buildCommand": "next build"
 }
